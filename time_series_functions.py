@@ -49,10 +49,10 @@ def stationarity_check(ts, window=12, plot=True, index=["Ad Fuller Result"], cen
     
     #Plot the dataset and the time series
     if plot:
-        rcParams["figure.figsize"] = 15, 7
-        ax = roll_mean.plot(color="red", label=f"Rolling Mean (Window={window})")
-        roll_std.plot(color="black",ax=ax, label=f"Rolling Std (Window={window})")
-        ts.plot(color="yellow",ax=ax, label="original")
+        fig, ax = plt.subplots(figsize=(15, 7))
+        ax.plot(roll_mean,color="red", label=f"Rolling Mean (Window={window})")
+        ax.plot(roll_std,color="black", label=f"Rolling Std (Window={window})")
+        ax.plot(ts, color="yellow", label="original")
         plt.legend(loc="best")
         plt.title("Rolling Mean & Standard Deviation")
         display(req_df)
