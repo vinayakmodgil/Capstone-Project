@@ -1,2 +1,0 @@
-__pycache__
-complete_LSTM_stocks_model
