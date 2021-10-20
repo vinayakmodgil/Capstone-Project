@@ -12,10 +12,10 @@ In this project, I will pick certain stocks from different datasets and predict/
 ## Results
 
 Prediction using SARIMAX model on Reliance Stock.
-<img src="sarimax_reliance.png" width=80%>
+<img src="images/sarimax_reliance.png" width=80%>
 
 Prediction using LSTM model on HDFC Stock.
-<img src="hdfc_lstm.png" width=80%>
+<img src="images/hdfc_lstm.png" width=80%>
 
 ## Conclusion and Recommendations
 From the project, I have derived the following conclusions:
