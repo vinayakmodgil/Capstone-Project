@@ -149,23 +149,23 @@ def model_eval(ts, prev_ts=None, arima=None, order=(1, 0)):
 def model_stock(X_train, y_train):
     model = Sequential()
     
-    model.add(LSTM(units=50, return_sequences=True))
+    model.add(LSTM(units=75, return_sequences=True))
     model.add(Dropout(0.02))
     
-    model.add(LSTM(units=50, return_sequences=True))
+    model.add(LSTM(units=75, return_sequences=True))
     model.add(Dropout(0.02))
     
-    model.add(LSTM(units=50, return_sequences=True))
+    model.add(LSTM(units=75, return_sequences=True))
     model.add(Dropout(0.02))
     
-    model.add(LSTM(units=50))
+    model.add(LSTM(units=75))
     model.add(Dropout(0.02))
     
     model.add(Dense(units=1))
     
     model.compile(optimizer="adam", loss="mean_squared_error")
     
-    model.fit(X_train, y_train, epochs=50, batch_size=32)
+    model.fit(X_train, y_train, epochs=100, batch_size=32)
     
     return model    
             
